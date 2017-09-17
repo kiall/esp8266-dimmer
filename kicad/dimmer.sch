@@ -41,7 +41,7 @@ encoding utf-8
 Sheet 1 2
 Title "ESP8266 ESP-03 Lighting Dimmer"
 Date ""
-Rev "1.0"
+Rev "1.1"
 Comp "Kiall Mac Inness"
 Comment1 ""
 Comment2 ""
@@ -162,7 +162,7 @@ F 1 "BT136X-600" H 4325 5150 50  0000 L CNN
 F 2 "TO_SOT_Packages_THT:TO-220_Vertical" V 4275 5225 50  0001 C CNN
 F 3 "" V 4200 5200 50  0001 C CNN
 	1    4200 5200
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3850 2600 3850 5050
@@ -189,14 +189,6 @@ $EndComp
 Connection ~ 4200 5050
 Wire Wire Line
 	5200 5050 5600 5050
-Wire Wire Line
-	5600 5250 5600 5450
-Wire Wire Line
-	5600 5450 3950 5450
-Wire Wire Line
-	3950 5450 3950 5300
-Wire Wire Line
-	3950 5300 4050 5300
 $Comp
 L Conn_01x03 J3
 U 1 1 59BB0206
@@ -344,4 +336,10 @@ Text Notes 4000 3350 0    60   ~ 0
 Zero Crossing Detection
 Text Notes 4000 4650 0    60   ~ 0
 Dimming
+Wire Wire Line
+	5600 5250 4500 5250
+Wire Wire Line
+	4500 5250 4500 5100
+Wire Wire Line
+	4500 5100 4350 5100
 $EndSCHEMATC
