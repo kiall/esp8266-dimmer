@@ -1,0 +1,327 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:kiall
+LIBS:ESP8266
+LIBS:dimmer-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "ESP8266 ESP-03 Lighting Dimmer"
+Date ""
+Rev "1.0"
+Comp "Kiall Mac Inness"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DF04M-E3/45 D2
+U 1 1 59BACA61
+P 5100 3800
+F 0 "D2" H 4750 4200 60  0000 C CNN
+F 1 "DF04M-E3/45" H 5200 4200 60  0000 C CNN
+F 2 "kiall:DF-M" H 5100 3800 60  0001 C CNN
+F 3 "" H 5100 3800 60  0001 C CNN
+	1    5100 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R6
+U 1 1 59BAD022
+P 4200 3600
+F 0 "R6" V 4280 3600 50  0000 C CNN
+F 1 "30k" V 4200 3600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4130 3600 50  0001 C CNN
+F 3 "" H 4200 3600 50  0001 C CNN
+	1    4200 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R7
+U 1 1 59BAD07B
+P 4200 4000
+F 0 "R7" V 4280 4000 50  0000 C CNN
+F 1 "30k" V 4200 4000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4130 4000 50  0001 C CNN
+F 3 "" H 4200 4000 50  0001 C CNN
+	1    4200 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 4000 4500 4000
+Wire Wire Line
+	4350 3600 4500 3600
+$Comp
+L 4N25 U3
+U 1 1 59BAD683
+P 6150 3800
+F 0 "U3" H 5950 4000 50  0000 L CNN
+F 1 "4N25" H 6150 4000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_SMD" H 5950 3600 50  0001 L CIN
+F 3 "" H 6150 3800 50  0001 L CNN
+	1    6150 3800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5700 3600 5700 3700
+Wire Wire Line
+	5700 4000 5700 3900
+$Comp
+L GND #PWR01
+U 1 1 59BADAE5
+P 6550 3700
+F 0 "#PWR01" H 6550 3450 50  0001 C CNN
+F 1 "GND" H 6550 3550 50  0000 C CNN
+F 2 "" H 6550 3700 50  0001 C CNN
+F 3 "" H 6550 3700 50  0001 C CNN
+	1    6550 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6450 3700 6550 3700
+NoConn ~ 6450 3900
+$Comp
+L R R9
+U 1 1 59BADC38
+P 6950 3800
+F 0 "R9" V 7030 3800 50  0000 C CNN
+F 1 "10k" V 6950 3800 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6880 3800 50  0001 C CNN
+F 3 "" H 6950 3800 50  0001 C CNN
+	1    6950 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L +3V3 #PWR02
+U 1 1 59BADC99
+P 7350 3800
+F 0 "#PWR02" H 7350 3650 50  0001 C CNN
+F 1 "+3V3" H 7350 3940 50  0000 C CNN
+F 2 "" H 7350 3800 50  0001 C CNN
+F 3 "" H 7350 3800 50  0001 C CNN
+	1    7350 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 3800 6800 3800
+Wire Wire Line
+	7100 3800 7350 3800
+Text Label 6750 2650 3    60   ~ 0
+ZeroCrossingOut
+$Comp
+L MOC3021M U2
+U 1 1 59BAEACD
+P 5900 4650
+F 0 "U2" H 5690 4840 50  0000 L CNN
+F 1 "MOC3021M" H 5900 4850 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 5700 4450 50  0001 L CIN
+F 3 "" H 5875 4650 50  0001 L CNN
+	1    5900 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_TRIAC_AAG D1
+U 1 1 59BAECA2
+P 4200 4700
+F 0 "D1" H 4325 4725 50  0000 L CNN
+F 1 "BT136X-600" H 4325 4650 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" V 4275 4725 50  0001 C CNN
+F 3 "" V 4200 4700 50  0001 C CNN
+	1    4200 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2600 3850 4550
+Wire Wire Line
+	3850 4550 4900 4550
+Connection ~ 3850 3600
+Wire Wire Line
+	4200 4850 4200 5150
+Text Label 4450 5150 0    60   ~ 0
+DimmedLiveOut
+Wire Wire Line
+	4200 5150 5400 5150
+$Comp
+L R R8
+U 1 1 59BAFEEA
+P 5050 4550
+F 0 "R8" V 5130 4550 50  0000 C CNN
+F 1 "1k" V 5050 4550 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4980 4550 50  0001 C CNN
+F 3 "" H 5050 4550 50  0001 C CNN
+	1    5050 4550
+	0    1    1    0   
+$EndComp
+Connection ~ 4200 4550
+Wire Wire Line
+	5200 4550 5600 4550
+Wire Wire Line
+	5600 4750 5600 4950
+Wire Wire Line
+	5600 4950 3950 4950
+Wire Wire Line
+	3950 4950 3950 4800
+Wire Wire Line
+	3950 4800 4050 4800
+$Comp
+L Conn_01x03 J3
+U 1 1 59BB0206
+P 5600 5250
+F 0 "J3" H 5600 5450 50  0000 C CNN
+F 1 "Load Out" H 5600 5050 50  0000 C CNN
+F 2 "kiall:RS_Pro_10mm_Pitch_3_Way_PCB_Terminal_Block" H 5600 5250 50  0001 C CNN
+F 3 "" H 5600 5250 50  0001 C CNN
+	1    5600 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2400 3750 5350
+Wire Wire Line
+	3750 5350 5400 5350
+Connection ~ 3750 4000
+$Comp
+L LED D3
+U 1 1 59BB07F2
+P 6600 4550
+F 0 "D3" H 6600 4650 50  0000 C CNN
+F 1 "LED" H 6600 4450 50  0000 C CNN
+F 2 "LEDs:LED_D4.0mm" H 6600 4550 50  0001 C CNN
+F 3 "" H 6600 4550 50  0001 C CNN
+	1    6600 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4550 6450 4550
+$Comp
+L R R10
+U 1 1 59BB08C6
+P 7050 4550
+F 0 "R10" V 7130 4550 50  0000 C CNN
+F 1 "220" V 7050 4550 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6980 4550 50  0001 C CNN
+F 3 "" H 7050 4550 50  0001 C CNN
+	1    7050 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 4550 6900 4550
+Text Label 7700 3300 1    60   ~ 0
+DimmerIn
+$Sheet
+S 5000 1900 1200 1050
+U 59BB2793
+F0 "esp8266-base" 60
+F1 "esp8266-base.sch" 60
+F2 "ZeroCrossingIn" I R 6200 2500 60 
+F3 "DimmerOut" I R 6200 2250 60 
+F4 "AC+" I L 5000 2600 60 
+F5 "AC-" I L 5000 2400 60 
+F6 "AC0" I L 5000 2200 60 
+$EndSheet
+Wire Wire Line
+	5700 3700 5850 3700
+Wire Wire Line
+	5700 3900 5850 3900
+$Comp
+L GND #PWR03
+U 1 1 59BB3317
+P 6350 4750
+F 0 "#PWR03" H 6350 4500 50  0001 C CNN
+F 1 "GND" H 6350 4600 50  0000 C CNN
+F 2 "" H 6350 4750 50  0001 C CNN
+F 3 "" H 6350 4750 50  0001 C CNN
+	1    6350 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4750 6200 4750
+Wire Wire Line
+	6750 2500 6750 3800
+Connection ~ 6750 3800
+$Comp
+L Fuse F1
+U 1 1 59BB678C
+P 4400 2600
+F 0 "F1" V 4480 2600 50  0000 C CNN
+F 1 "5A" V 4325 2600 50  0000 C CNN
+F 2 "kiall:Fuse_Holder_5x20mm_P15mm" V 4330 2600 50  0001 C CNN
+F 3 "" H 4400 2600 50  0001 C CNN
+	1    4400 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 2500 6200 2500
+Wire Wire Line
+	6200 2250 7700 2250
+Wire Wire Line
+	7700 2250 7700 4550
+Wire Wire Line
+	7700 4550 7200 4550
+Wire Wire Line
+	5000 2600 4550 2600
+Wire Wire Line
+	4250 2600 3850 2600
+Wire Wire Line
+	3850 3600 4050 3600
+Wire Wire Line
+	3750 2400 5000 2400
+Wire Wire Line
+	3750 4000 4050 4000
+$Comp
+L GS2 J4
+U 1 1 59BD7F23
+P 6600 4350
+F 0 "J4" H 6700 4500 50  0000 C CNN
+F 1 "LED_BYPASS" V 6700 4201 50  0000 C CNN
+F 2 "Connectors:GS2" V 6674 4350 50  0001 C CNN
+F 3 "" H 6600 4350 50  0001 C CNN
+	1    6600 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 4350 6800 4550
+Connection ~ 6800 4550
+Wire Wire Line
+	6400 4350 6400 4550
+Connection ~ 6400 4550
+Wire Wire Line
+	5000 2200 3650 2200
+Wire Wire Line
+	3650 2200 3650 5250
+Wire Wire Line
+	3650 5250 5400 5250
+$EndSCHEMATC
