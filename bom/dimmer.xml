@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/kiall/KiCad Projects/dimmer/kicad/dimmer.sch</source>
-    <date>Sun 17 Sep 2017 14:10:56 IST</date>
+    <date>Sun 17 Sep 2017 15:49:24 IST</date>
     <tool>Eeschema 4.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -523,14 +523,11 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="switches">
-      <uri>/home/kiall/.local/share/kicad/library-repos/kicad-library/library/switches.lib</uri>
-    </library>
     <library logical="device">
       <uri>/home/kiall/.local/share/kicad/library-repos/kicad-library/library/device.lib</uri>
     </library>
-    <library logical="opto">
-      <uri>/home/kiall/.local/share/kicad/library-repos/kicad-library/library/opto.lib</uri>
+    <library logical="switches">
+      <uri>/home/kiall/.local/share/kicad/library-repos/kicad-library/library/switches.lib</uri>
     </library>
     <library logical="kiall">
       <uri>/home/kiall/kicad/libraries/kiall/kiall.lib</uri>
@@ -540,6 +537,9 @@
     </library>
     <library logical="conn">
       <uri>/home/kiall/.local/share/kicad/library-repos/kicad-library/library/conn.lib</uri>
+    </library>
+    <library logical="opto">
+      <uri>/home/kiall/.local/share/kicad/library-repos/kicad-library/library/opto.lib</uri>
     </library>
   </libraries>
   <nets>
