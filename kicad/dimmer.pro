@@ -1,4 +1,4 @@
-update=Thu 14 Sep 2017 15:49:03 IST
+update=Sun 17 Sep 2017 21:29:27 IST
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,13 @@ LibName31=contrib
 LibName32=valves
 LibName33=/home/kiall/kicad/libraries/kiall/kiall
 LibName34=/home/kiall/kicad/libraries/kicad-ESP8266/ESP8266
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=../images/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

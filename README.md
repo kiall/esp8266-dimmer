@@ -5,9 +5,9 @@ KiCad Schematic and PCB Design for a ESP8266 / ESP-03 based light dimmer.
 
 ## Board Images
 
-![Front](dimmer-front.png)
+![Front](images/dimmer-front.png)
 
-![Back](dimmer-back.png)
+![Back](images/dimmer-back.png)
 
 ## References
 
