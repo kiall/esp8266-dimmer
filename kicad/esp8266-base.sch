@@ -65,7 +65,7 @@ U 1 1 59B3C534
 P 5950 2600
 F 0 "C3" H 5975 2700 50  0000 L CNN
 F 1 "470uF" H 5975 2500 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 5988 2450 50  0001 C CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10.5" H 5988 2450 50  0001 C CNN
 F 3 "" H 5950 2600 50  0001 C CNN
 	1    5950 2600
 	0    -1   -1   0   
@@ -303,7 +303,7 @@ F 1 "AC IN" H 3600 6600 50  0000 C CNN
 F 2 "kiall:RS_Pro_10mm_Pitch_3_Way_PCB_Terminal_Block" H 3600 6800 50  0001 C CNN
 F 3 "" H 3600 6800 50  0001 C CNN
 	1    3600 6800
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Text Notes 3750 6200 0    60   ~ 0
 Myrra "All in one" PCB mount\nregulated PSU. No extra\ncomponents needed.
@@ -401,9 +401,9 @@ Wire Notes Line
 Wire Wire Line
 	1100 6950 600  6950
 Text Label 3900 6600 0    60   ~ 0
-AC+
-Text Label 3900 7000 0    60   ~ 0
 AC-
+Text Label 3900 7000 0    60   ~ 0
+AC+
 NoConn ~ 4900 3700
 $Comp
 L Q_PNP_EBC Q1
@@ -464,9 +464,9 @@ Text HLabel 7050 3800 3    60   Input ~ 0
 ZeroCrossingIn
 Wire Wire Line
 	7050 3800 6700 3800
-Text HLabel 4100 6600 1    60   Input ~ 0
-AC+
 Text HLabel 4100 7000 3    60   Input ~ 0
+AC+
+Text HLabel 4100 6600 1    60   Input ~ 0
 AC-
 Text Label 4050 6800 2    60   ~ 0
 AC0
@@ -474,4 +474,91 @@ Wire Wire Line
 	3800 6800 4100 6800
 Text HLabel 4100 6800 2    60   Input ~ 0
 AC0
+$Comp
+L Conn_01x02 J5
+U 1 1 59D378FC
+P 5850 6850
+F 0 "J5" H 5850 6950 50  0000 C CNN
+F 1 "PWRIN" H 5850 6650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5850 6850 50  0001 C CNN
+F 3 "" H 5850 6850 50  0001 C CNN
+	1    5850 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 59D37B69
+P 6200 6750
+F 0 "#PWR015" H 6200 6500 50  0001 C CNN
+F 1 "GND" H 6200 6600 50  0000 C CNN
+F 2 "" H 6200 6750 50  0001 C CNN
+F 3 "" H 6200 6750 50  0001 C CNN
+	1    6200 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3V3 #PWR016
+U 1 1 59D37B9D
+P 6200 6850
+F 0 "#PWR016" H 6200 6700 50  0001 C CNN
+F 1 "+3V3" H 6200 6990 50  0000 C CNN
+F 2 "" H 6200 6850 50  0001 C CNN
+F 3 "" H 6200 6850 50  0001 C CNN
+	1    6200 6850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6050 6850 6200 6850
+Wire Wire Line
+	6200 6750 6050 6750
+$Comp
+L LED D3
+U 1 1 59E1F956
+P 6050 6050
+F 0 "D3" H 6050 6150 50  0000 C CNN
+F 1 "LED" H 6050 5950 50  0000 C CNN
+F 2 "LEDs:LED_D4.0mm" H 6050 6050 50  0001 C CNN
+F 3 "" H 6050 6050 50  0001 C CNN
+	1    6050 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3V3 #PWR017
+U 1 1 59E1FB6D
+P 5800 6050
+F 0 "#PWR017" H 5800 5900 50  0001 C CNN
+F 1 "+3V3" H 5800 6190 50  0000 C CNN
+F 2 "" H 5800 6050 50  0001 C CNN
+F 3 "" H 5800 6050 50  0001 C CNN
+	1    5800 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5800 6050 5900 6050
+$Comp
+L R R11
+U 1 1 59E1FBFA
+P 6600 6050
+F 0 "R11" V 6680 6050 50  0000 C CNN
+F 1 "330" V 6600 6050 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6530 6050 50  0001 C CNN
+F 3 "" H 6600 6050 50  0001 C CNN
+	1    6600 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6200 6050 6450 6050
+$Comp
+L GND #PWR018
+U 1 1 59E1FCCA
+P 6900 6050
+F 0 "#PWR018" H 6900 5800 50  0001 C CNN
+F 1 "GND" H 6900 5900 50  0000 C CNN
+F 2 "" H 6900 6050 50  0001 C CNN
+F 3 "" H 6900 6050 50  0001 C CNN
+	1    6900 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 6050 6750 6050
 $EndSCHEMATC

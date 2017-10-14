@@ -92,6 +92,30 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Conn_01x02
+#
+DEF Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Conn_01x02" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_??x*mm*
+ Connector*:*1x??x*mm*
+ Pin?Header?Straight?1X*
+ Pin?Header?Angled?1X*
+ Socket?Strip?Straight?1X*
+ Socket?Strip?Angled?1X*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Conn_01x03
 #
 DEF Conn_01x03 J 0 40 Y N 1 F N
@@ -235,24 +259,6 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# GS2
-#
-DEF GS2 J 0 40 N N 1 F N
-F0 "J" 100 150 50 H V C CNN
-F1 "GS2" 100 -149 50 H V C CNN
-F2 "Connectors:GS2" 74 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- GS*
-$ENDFPLIST
-DRAW
-P 4 0 1 0 -40 -10 -40 -100 40 -100 40 -10 F
-P 4 0 1 0 -40 10 -40 100 40 100 40 10 F
-X G1 1 0 200 100 D 50 50 1 1 P
-X G2 2 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -41,7 +41,7 @@ encoding utf-8
 Sheet 1 2
 Title "ESP8266 ESP-03 Lighting Dimmer"
 Date ""
-Rev "1.1"
+Rev "1.2"
 Comp "Kiall Mac Inness"
 Comment1 ""
 Comment2 ""
@@ -91,7 +91,7 @@ U 1 1 59BAD683
 P 6150 3800
 F 0 "U3" H 5950 4000 50  0000 L CNN
 F 1 "4N25" H 6150 4000 50  0000 L CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm_SMD" H 5950 3600 50  0001 L CIN
+F 2 "Housings_DIP:SMDIP-6_W9.53mm" H 5950 3600 50  0001 L CIN
 F 3 "" H 6150 3800 50  0001 L CNN
 	1    6150 3800
 	1    0    0    1   
@@ -159,7 +159,7 @@ U 1 1 59BAECA2
 P 4200 5200
 F 0 "D1" H 4325 5225 50  0000 L CNN
 F 1 "BT136X-600" H 4325 5150 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" V 4275 5225 50  0001 C CNN
+F 2 "TO_SOT_Packages_THT:TO-220-3_Vertical" V 4275 5225 50  0001 C CNN
 F 3 "" V 4200 5200 50  0001 C CNN
 	1    4200 5200
 	-1   0    0    1   
@@ -205,19 +205,8 @@ Wire Wire Line
 Wire Wire Line
 	3750 5850 5400 5850
 Connection ~ 3750 4000
-$Comp
-L LED D3
-U 1 1 59BB07F2
-P 6600 5050
-F 0 "D3" H 6600 5150 50  0000 C CNN
-F 1 "LED" H 6600 4950 50  0000 C CNN
-F 2 "LEDs:LED_D4.0mm" H 6600 5050 50  0001 C CNN
-F 3 "" H 6600 5050 50  0001 C CNN
-	1    6600 5050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	6200 5050 6450 5050
+	6200 5050 6900 5050
 $Comp
 L R R10
 U 1 1 59BB08C6
@@ -229,8 +218,6 @@ F 3 "" H 7050 5050 50  0001 C CNN
 	1    7050 5050
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6750 5050 6900 5050
 Text Label 7700 2550 3    60   ~ 0
 DimmerIn
 $Sheet
@@ -293,23 +280,6 @@ Wire Wire Line
 	3750 2400 5000 2400
 Wire Wire Line
 	3750 4000 4050 4000
-$Comp
-L GS2 J4
-U 1 1 59BD7F23
-P 6600 4850
-F 0 "J4" H 6700 5000 50  0000 C CNN
-F 1 "LED_BYPASS" V 6700 4701 50  0000 C CNN
-F 2 "Connectors:GS2" V 6674 4850 50  0001 C CNN
-F 3 "" H 6600 4850 50  0001 C CNN
-	1    6600 4850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6800 4850 6800 5050
-Connection ~ 6800 5050
-Wire Wire Line
-	6400 4850 6400 5050
-Connection ~ 6400 5050
 Wire Wire Line
 	5000 2200 3650 2200
 Wire Wire Line
