@@ -3,7 +3,7 @@ ESP8266 Light Dimmer
 
 KiCad Schematic and PCB Design for a ESP8266 / ESP-03 based light dimmer.
 
-Currently untested.
+Tested as working - see revision history for more.
 
 ## Board Images
 
@@ -19,6 +19,8 @@ Back:
 
 ### v1.2:
 
+v1.2 is tested as working.
+
 Fixes:
 
 * Fix PSU Ordering - Secondary DC + and - pins swapped.
@@ -29,7 +31,7 @@ Fixes:
 
 Issues Not Yet Fixed:
 
-* None
+* More space behind D1 (Triac) would be better, to allow for a larger heatsink.
 
 ### v1.1:
 
