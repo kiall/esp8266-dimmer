@@ -32,7 +32,7 @@ Fixes:
 Issues Not Yet Fixed:
 
 * More space behind D1 (Triac) would be better, to allow for a larger heatsink.
-
+* 3v3 + GND power inputs for programming without a mains connection should be labeled on the board.
 ### v1.1:
 
 Fixes:
